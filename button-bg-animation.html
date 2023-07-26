@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+  button{
+   background-color:black;
+   color:white;
+   border:none;
+   outline:none;
+   padding:2em;
+   
+   display:flex;
+   align-items:center;
+   justify-content:center;
+
+   position: absolute;
+   top:50%;
+   left:50%;
+   border-radius:50%;
+   
+   height:100px;
+   width:100px;
+   text-align:center;
+
+ }
+ 
+ button::after
+ {
+   content:'';
+   background-color:black;
+   border:none;
+   outline:none;
+   padding:2em;
+   
+   position:absolute;
+   z-index:-1;
+   border-radius:50%;
+   
+   height:100px;
+   width:100px;
+   text-align:center;
+   opacity:0.7;
+ 
+ }
+ 
+  button::before
+ {
+   content:'';
+   background-color:black;
+   border:none;
+   outline:none;
+   padding:2em;
+   
+   position:absolute;
+   z-index:-1;
+   border-radius:50%;
+   
+   height:100px;
+   width:100px;
+   text-align:center;
+   opacity:0.7;
+ 
+ }
+ 
+ 
+  button:before{
+        animation:transformanime 2s .5s ease-out infinite; 
+  }
+ 
+ button:after{
+        animation:transformanime 2s  ease-out infinite; 
+ }
+ 
+
+  
+ @keyframes transformanime{
+ 
+    100%{
+      transform:scale(1.5);
+      opacity:0;
+    }
+ }
+ 
+</style>
+<body>
+<button>Hello</button>
+</body>
+
+</html>
